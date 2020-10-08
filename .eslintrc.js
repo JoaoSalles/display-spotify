@@ -9,7 +9,7 @@ module.exports = {
       'prettier/@typescript-eslint',
       'plugin:prettier/recommended'
     ],
-    plugins: ['react', '@typescript-eslint', 'jest'],
+    plugins: ['react', '@typescript-eslint', 'jest', 'baseui'],
     env: {
       browser: true,
       es6: true,
@@ -36,5 +36,8 @@ module.exports = {
           endOfLine: 'auto',
         },
       ],
+      'baseui/deprecated-theme-api': "warn",
+      'baseui/deprecated-component-api': "warn",
+      'baseui/no-deep-imports': "warn",
     },
   };
