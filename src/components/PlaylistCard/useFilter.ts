@@ -1,22 +1,11 @@
 import { useState, useEffect } from 'react';
-
-type filterFormatField = {
-    id: string,
-    name: string,
-    validation: { entityType?: string, pattern?: string, primitiveType: string}  
-}
-
-type filterFormatDropdown = {
-    id: string,
-    name: string,
-    values: Array<{value: string, name: string}>  
-}
+import { filterFormatField } from 'types/filterFormatTypes';
 
 const useFilter = () => {
-    const [filterField, setFilterField] = useState<{[key: string]: filterFormatField | filterFormatDropdown}>({});
+    const [filterField, setFilterField] = useState<{[key: string]: filterFormatField}>({});
 
     function normilizeFilterFormat(fields: Array<any>) {
-        const normilizedFormat: { [key: string]: filterFormatField | filterFormatDropdown} = {}
+        const normilizedFormat: { [key: string]: filterFormatField} = {}
         fields.forEach(field => {
             normilizedFormat[field.id] = field;
         })

@@ -1,21 +1,19 @@
 import * as filterAction from '../actions/filterActions';
 
 interface state {
-  data: any,
-  loading: boolean
+  searchFilter: string,
 }
 
 const initialState: state = {
-  data: null,
-  loading: false
+  searchFilter: '',
 }
 
-export const authReducer = (state = initialState, action: any ) => {
+export const searchReducer = (state = initialState, action: any ) => {
     switch(action.type) {
       case filterAction.SET_FILTER:
         return { 
           ...state,
-          data: action.payload.data,
+          searchFilter: action.payload,
         }
       default:
         return state;

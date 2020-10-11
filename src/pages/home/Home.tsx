@@ -1,6 +1,7 @@
 import React from "react";
 import useAuth from './hooks/useAuth';
-import Filter from 'components/filter';
+import Filter from 'components/Filter';
+import Playlist from 'components/Playlist';
 import { HomeElement } from './styles';
 
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
   return (
     <HomeElement>
       <Filter/>
+      <Playlist/>
     </HomeElement>
   );
 }
