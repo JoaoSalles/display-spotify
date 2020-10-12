@@ -8,7 +8,6 @@ export const FilterElement = styled.div`
     width: 100%;
 `;
 
-
 export const FilterSearchPainel = styled.div`
     border: 1px solid ${BORDER_WHITE};
     border-radius: 5px;
@@ -35,6 +34,10 @@ export const FilterPainel = styled.div`
 
     & > div {
         margin: 20px 20px;
+    }
+
+    svg {
+        margin: 0 auto;
     }
 
     @media only screen and (max-width: 800px) {

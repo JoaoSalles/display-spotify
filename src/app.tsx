@@ -11,7 +11,9 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import Home from 'pages/home';
 import Login from 'pages/login';
+import { ToastContainer } from 'react-toastify';
 import configureStore from './store/configureStore';
+import 'react-toastify/dist/ReactToastify.css';
 
 const { store, persistor } = configureStore();
 
@@ -29,21 +31,22 @@ function App() {
   return (
     <StyletronProvider value={engine}>
       <BaseProvider theme={LightTheme}>
-        <Centered className="test">
-        <BrowserRouter>
-            <Provider store={store}>
-              <PersistGate loading={null} persistor={persistor}>
-                <Switch>
-                    <Route exact path="/login"
-                      component={Login}
-                    />
-                    <Route path="*"
-                    component={Home}
-                    />
-                </Switch>
-              </PersistGate>
-            </Provider>
-        </BrowserRouter>
+        <Centered>
+            <BrowserRouter>
+                <Provider store={store}>
+                  <PersistGate loading={null} persistor={persistor}>
+                      <ToastContainer position="bottom-center" autoClose={5000} hideProgressBar={false} draggable/>
+                      <Switch>
+                          <Route exact path="/login"
+                            component={Login}
+                          />
+                          <Route path="*"
+                          component={Home}
+                          />
+                      </Switch>
+                  </PersistGate>
+                </Provider>
+            </BrowserRouter>
         </Centered>
      </BaseProvider>
     </StyletronProvider>

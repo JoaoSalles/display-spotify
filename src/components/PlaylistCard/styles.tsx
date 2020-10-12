@@ -78,6 +78,7 @@ export const PlaylistCardElement = styled.a`
 
             img {
                 width: 50%;
+                z-index: 10;
             }
 
             &:hover {
