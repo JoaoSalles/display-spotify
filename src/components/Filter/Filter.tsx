@@ -9,7 +9,6 @@ interface Props {
 
 function Filter(props: Props) {
     const { filterFields, filterData, handleFieldChange } = useFilter();
-    console.log(filterFields, filterData);
     return (
         <FilterElement className="container">
             <FilterPainel className="painel">

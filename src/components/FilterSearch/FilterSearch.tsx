@@ -37,6 +37,7 @@ function FilterSearch(props: Props) {
                                 borderRightColor: border,
                                 borderTopColor: border,
                                 borderBottomColor: border,
+                                borderRadius: '5px',
                                 boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.05)',
                             };
                         },

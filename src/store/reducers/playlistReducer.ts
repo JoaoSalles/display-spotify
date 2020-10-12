@@ -1,7 +1,16 @@
 import * as playlistActions from '../actions/playlistActions';
 
+export type Playlist = {
+  name: string,
+  description: string,
+  external_urls: { spotify: string },
+  images: Array<{url: string}>,
+  tracks: { total: number },
+  id?: string
+}
+
 interface state {
-  playlist: [],
+  playlist: Array<Playlist>,
 }
 
 const initialState: state = {

@@ -4,6 +4,7 @@ import { FILTER_SAGA } from 'store/actions/filterActions';
 
 const useFilter = () => {
     const dispatch = useDispatch();
+
     let debounceFunction: any;
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

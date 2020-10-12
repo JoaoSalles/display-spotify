@@ -11,15 +11,18 @@ function* fetchPlaylist(url: string, token: string) {
       'authorization': `Bearer ${token}`
     },
   });
+
   return playlists
 }
 
 function* filterSaga(action: { type: string, payload: { token: string, url: string } }) {
   const responde = yield call(fetchPlaylist, action.payload.url, action.payload.token );
 
-  let jsonResponse =  yield call([responde, 'json']);
+    if (responde.status === 200) {
+      let jsonResponse =  yield call([responde, 'json']);
 
-  yield put({ type: playlistActions.SET_PLAYLIST, payload: jsonResponse.playlists.items });
+      yield put({ type: playlistActions.SET_PLAYLIST, payload: jsonResponse.playlists.items });
+    }
   }
 
 

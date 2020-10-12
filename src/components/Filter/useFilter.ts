@@ -39,7 +39,8 @@ const useFilter = () => {
         () => {
             getPlaylists()
         },
-        [auth, filterData]
+        // eslint-disable-next-line
+        [auth, filterData, getPlaylists]
     );
 
     useEffect(() => {

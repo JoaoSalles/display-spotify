@@ -11,6 +11,7 @@ export const FilterElement = styled.div`
 
 export const FilterSearchPainel = styled.div`
     border: 1px solid ${BORDER_WHITE};
+    border-radius: 5px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
     display: flex;
     margin: 20px 0;
@@ -24,6 +25,7 @@ export const FilterSearchPainel = styled.div`
 
 export const FilterPainel = styled.div`
     background: ${BACKGROUND_WHITE};
+    border-radius: 5px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
     border: 1px solid ${BORDER_WHITE};
     display: flex;

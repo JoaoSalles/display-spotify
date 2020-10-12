@@ -1,3 +1,3 @@
-import Playlist from './Playlist';
+import PlaylistCard from './PlaylistCard';
 
-export default Playlist;
+export default PlaylistCard;
