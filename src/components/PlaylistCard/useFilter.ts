@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
-import { filterFormatField } from 'types/filterFormatTypes';
+import { useState, useEffect } from "react";
+import { filterFormatField } from "types/filterFormatTypes";
 
-const useFilter = () => {
-}
+const useFilter = () => {};
 
 export default useFilter;

@@ -1,17 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HomeElement = styled.div`
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
-    @media only screen and (min-width: 800px) {
-        max-width: 800px;
-    }
-    
+  @media only screen and (min-width: 800px) {
+    max-width: 800px;
+  }
 
-    @media only screen and (min-width: 1200px) {
-        max-width: 1140px;
-    }
+  @media only screen and (min-width: 1200px) {
+    max-width: 1140px;
+  }
 `;
