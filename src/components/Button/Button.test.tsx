@@ -1,16 +1,22 @@
 import React from "react";
-import { render, fireEvent, waitForElement } from "@testing-library/react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
 import Button from "./Button";
 
 describe("Tests for Button", () => {
-  it("Should render button and trigger it", async () => {
-    const mockClick = jest.fn();
-    const { getByTestId } = render(<Button onClick={mockClick} />);
+    it("Should match snapshot", async () => {
+        const { container } = render(<Button onClick={() => {}} />);
 
-    const buttonField = await waitForElement(() => getByTestId("button-test"));
+        expect(container).toMatchSnapshot();
+    });
 
-    fireEvent.click(buttonField);
+    it("Should render button and trigger it", async () => {
+        const mockClick = jest.fn();
+        const { getByTestId } = render(<Button onClick={mockClick} />);
 
-    expect(mockClick).toBeCalled();
-  });
+        const buttonField = await waitFor(() => getByTestId("button-test"));
+
+        fireEvent.click(buttonField);
+
+        expect(mockClick).toBeCalled();
+    });
 });

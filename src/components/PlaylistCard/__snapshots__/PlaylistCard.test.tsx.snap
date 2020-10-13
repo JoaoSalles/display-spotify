@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Playlist card Should match snapshot 1`] = `
+<div>
+  <a
+    class="sc-bdnylx kTAkTV playlist-card"
+    href="url_test"
+  >
+    <div
+      class="playlist-card__content"
+    >
+      <img
+        alt="test description"
+        src="default_playlist_image.jpg"
+      />
+      <div
+        class="playlist-card__content__description"
+      >
+        <span
+          class="playlist-card__content__description__title"
+        >
+          test
+        </span>
+        <span
+          class="playlist-card__content__description__tracks"
+        >
+          1
+           musicas
+        </span>
+      </div>
+    </div>
+    <div
+      class="playlist-card__overlay"
+    >
+      <div
+        class="playlist-card__overlay--paint"
+      />
+      <img
+        alt="Play Icon"
+        src="play-button.svg"
+      />
+    </div>
+  </a>
+</div>
+`;

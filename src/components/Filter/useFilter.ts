@@ -4,6 +4,7 @@ import { filterFormatField } from "types/filterFormatTypes";
 import { PLAYLIST_SAGA } from "store/actions/playlistActions";
 import { RootState } from "store/reducers";
 import getURLParams from "utils/getURLParams";
+import fetchService from "utils/fetchService";
 import * as status from "constants/utils/status";
 
 const useFilter = () => {
@@ -28,7 +29,7 @@ const useFilter = () => {
   };
 
   async function getFilterFormat() {
-    const response = await fetch(
+    const response = await fetchService(
       "https://www.mocky.io/v2/5a25fade2e0000213aa90776"
     );
     if (response.status === 200) {

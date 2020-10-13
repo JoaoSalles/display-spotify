@@ -1,3 +1,3 @@
-import Filter from "./Filter";
+import FilterContainer from "./FilterContainer";
 
-export default Filter;
+export default FilterContainer;

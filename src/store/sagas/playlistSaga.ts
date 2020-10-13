@@ -2,9 +2,10 @@ import { put, takeLatest, call } from "redux-saga/effects";
 import { toast } from "react-toastify";
 import * as playlistActions from "../actions/playlistActions";
 import * as authActions from "../actions/authActions";
+import fetchService from "utils/fetchService";
 
 function* fetchPlaylist(url: string, token: string) {
-  const playlists = yield fetch(url, {
+  const playlists = yield fetchService(url, {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",

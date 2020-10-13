@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Button Should match snapshot 1`] = `
+<div>
+  <button
+    class=""
+    data-baseweb="button"
+    data-testid="button-test"
+  >
+    Logar com Spotify
+  </button>
+</div>
+`;

@@ -1,20 +1,28 @@
 import React from "react";
 import FilterSearch from "components/FilterSearch";
 import { Spinner } from "baseui/spinner";
-import useFilter from "./useFilter";
 import { getField } from "./utils/getField";
 import { FilterElement, FilterPainel, FilterSearchPainel } from "./styles";
+import { filterFormatField } from "types/filterFormatTypes";
 
-interface Props {}
+interface Props {
+  filterFields: Array<filterFormatField>,
+  filterData: { [key: string]: string},
+  handleFieldChange: ({ field, value, }: {
+        field: string;
+        value: string;
+    }) => void,
+  loading: boolean
+}
 
 function Filter(props: Props) {
-  const { filterFields, filterData, handleFieldChange, loading } = useFilter();
+  const { filterFields, filterData, handleFieldChange, loading } = props;
 
   return (
     <FilterElement className="container">
       <FilterPainel className="painel">
         {loading ? (
-          <Spinner color="#EA1D2C" />
+          <Spinner data-testid="loading" color="#EA1D2C" />
         ) : (
           filterFields.map((filterField) =>
             getField(filterField, handleFieldChange, filterData)
